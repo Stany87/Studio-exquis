@@ -8,6 +8,7 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", display: "sw
 const SE = {
   bg: "#FAF8F6",
   accent: "#DEB5A0",
+  accentBright: "#B57E5D",
   text: "#2D2926",
   textSecondary: "#6B6462",
   textMuted: "#9B9492",
@@ -140,7 +141,7 @@ export default function ServicesSection() {
               {/* Icon (roman numeral) */}
               <div
                 className={`mb-5 ${greatVibes.className}`}
-                style={{ fontSize: "2rem", color: SE.accent, lineHeight: 1 }}
+                style={{ fontSize: "2rem", color: SE.accentBright, lineHeight: 1 }}
               >
                 {service.icon}
               </div>
@@ -156,7 +157,7 @@ export default function ServicesSection() {
               {/* Divider */}
               <div
                 className="mb-4"
-                style={{ width: 30, height: 1, background: SE.accent, transition: "width 0.3s ease" }}
+                style={{ width: 30, height: 1, background: SE.accentBright, transition: "width 0.3s ease" }}
               />
 
               {/* Description */}

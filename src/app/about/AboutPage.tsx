@@ -12,6 +12,7 @@ const SE = {
   bgPanel: "#F5F0EC",
   bgDark: "#2D2926",
   accent: "#DEB5A0",
+  accentBright: "#B57E5D",
   text: "#2D2926",
   textSecondary: "#6B6462",
   textMuted: "#9B9492",
@@ -605,7 +606,7 @@ export default function AboutPage() {
               { value: "100%", label: "REFERRAL", sub: "client satisfaction" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className={`${greatVibes.className} mb-1`} style={{ color: SE.accent, fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>{stat.value}</div>
+                <div className={`${greatVibes.className} mb-1`} style={{ color: SE.accentBright, fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>{stat.value}</div>
                 <div className={`text-[10px] tracking-[0.25em] uppercase mb-1 ${gfsDidot.className}`} style={{ color: "rgba(255,255,255,0.6)" }}>{stat.label}</div>
                 <div className={`text-[10px] italic ${gfsDidot.className}`} style={{ color: "rgba(255,255,255,0.3)" }}>{stat.sub}</div>
               </div>

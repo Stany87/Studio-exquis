@@ -8,6 +8,7 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", display: "sw
 const SE = {
   bg: "#FAF8F6",
   accent: "#DEB5A0",
+  accentBright: "#B57E5D",
   text: "#2D2926",
   textSecondary: "#6B6462",
   textMuted: "#9B9492",
@@ -89,18 +90,13 @@ export default function AboutSection() {
               className={`text-base leading-[1.9] ${gfsDidot.className}`}
               style={{ color: SE.textSecondary }}
             >
-              Studio Exquis was founded on a singular belief: that the spaces we inhabit
-              shape the lives we lead. Every project begins with listening — to the light
-              in a room, to the rhythm of a household, to the unspoken desires that a
-              client hasn&apos;t yet found words for.
+              Every space has a story waiting to be told. At Studio Exquis, we don&apos;t start with blueprints; we start by listening. We listen to the way morning light filters through a window, the gentle cadence of daily life, and the quiet, unexpressed dreams of the people who will call this home.
             </p>
             <p
               className={`text-base leading-[1.9] mt-6 ${gfsDidot.className}`}
               style={{ color: SE.textSecondary }}
             >
-              We don&apos;t follow trends. We follow materials — the grain of a walnut slab,
-              the veining of Calacatta marble, the drape of Belgian linen. When the
-              materials speak, the design writes itself.
+              We believe in the integrity of raw, honest materials. The organic sweep of a walnut slab, the unique storytelling of Calacatta marble, the soft texture of hand-woven Belgian linen. We don&apos;t design to follow passing trends; we design to let these natural elements speak for themselves.
             </p>
           </div>
 
@@ -109,16 +105,13 @@ export default function AboutSection() {
               className={`text-base leading-[1.9] ${gfsDidot.className}`}
               style={{ color: SE.textSecondary }}
             >
-              From penthouses in Manhattan to châteaux in the Loire Valley, our work
-              spans continents but shares a common thread: an obsessive attention to the
-              details that most people feel but never see. The way a handle sits in the
-              palm. The exact temperature of a wall color at dusk.
+              Our portfolio spans from historic European estates to contemporary urban sanctuaries, but our philosophy remains unchanged: luxury is found in the details felt rather than seen. The comforting weight of a custom brass handle, the hand-applied texture of plaster walls, the subtle shifting of shadows as afternoon fades into dusk.
             </p>
             <p
               className={`text-base leading-[1.9] mt-6 ${gfsDidot.className}`}
               style={{ color: SE.textSecondary }}
             >
-              These are not decorations. They are the architecture of feeling.
+              These elements are not mere decorations. They are the architecture of human emotion.
             </p>
           </div>
         </div>
@@ -153,7 +146,7 @@ export default function AboutSection() {
             <div key={stat.label} className="text-center">
               <div
                 className={`${greatVibes.className} mb-2`}
-                style={{ color: SE.accent, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
+                style={{ color: SE.accentBright, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
               >
                 {stat.value}
               </div>
