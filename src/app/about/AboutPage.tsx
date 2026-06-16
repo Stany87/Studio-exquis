@@ -257,8 +257,8 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           {/* Eyebrow */}
           <div data-reveal className="reveal-fade text-center mb-16">
-            <span className={`text-[11px] tracking-[0.35em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>OUR BEGINNING</span>
-            <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(2.8rem, 6vw, 4.3rem)" }}>
+            <span className={`text-[13px] tracking-[0.4em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>OUR BEGINNING</span>
+            <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(3rem, 6.5vw, 4.8rem)" }}>
               Where It All Started
             </h2>
           </div>
@@ -336,8 +336,8 @@ export default function AboutPage() {
       >
         <div className="max-w-6xl mx-auto">
           <div data-reveal className="reveal-fade text-center mb-16">
-            <span className={`text-[11px] tracking-[0.35em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>MEET OUR FOUNDER</span>
-            <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(2.8rem, 6vw, 4.3rem)" }}>
+            <span className={`text-[13px] tracking-[0.4em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>MEET OUR FOUNDER</span>
+            <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(3rem, 6.5vw, 4.8rem)" }}>
               The Vision Behind the Studio
             </h2>
           </div>
@@ -419,8 +419,8 @@ export default function AboutPage() {
       >
         <div className="max-w-6xl mx-auto">
           <div data-reveal className="reveal-fade text-center mb-16">
-            <span className={`text-[11px] tracking-[0.35em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>OUR PHILOSOPHY</span>
-            <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(2.8rem, 6vw, 4.3rem)" }}>
+            <span className={`text-[13px] tracking-[0.4em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>OUR PHILOSOPHY</span>
+            <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(3rem, 6.5vw, 4.8rem)" }}>
               Design is Not What You See
             </h2>
           </div>
@@ -489,8 +489,8 @@ export default function AboutPage() {
       >
         <div className="max-w-6xl mx-auto">
           <div data-reveal className="reveal-fade text-center mb-20">
-            <span className={`text-[11px] tracking-[0.35em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>THE JOURNEY</span>
-            <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(2.8rem, 6vw, 4.3rem)" }}>
+            <span className={`text-[13px] tracking-[0.4em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>THE JOURNEY</span>
+            <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(3rem, 6.5vw, 4.8rem)" }}>
               From Dream to Dwelling
             </h2>
           </div>
@@ -592,8 +592,8 @@ export default function AboutPage() {
       >
         <div className="max-w-5xl mx-auto">
           <div data-reveal className="reveal-fade text-center mb-16">
-            <span className={`text-[11px] tracking-[0.35em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>BY THE NUMBERS</span>
-            <h2 className={`${greatVibes.className}`} style={{ color: "rgba(255,255,255,0.9)", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
+            <span className={`text-[13px] tracking-[0.4em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>BY THE NUMBERS</span>
+            <h2 className={`${greatVibes.className}`} style={{ color: "rgba(255,255,255,0.9)", fontSize: "clamp(2.7rem, 5.5vw, 4.3rem)" }}>
               A Decade of Dedication
             </h2>
           </div>
@@ -627,8 +627,8 @@ export default function AboutPage() {
         }}
       >
         <div data-reveal className="reveal-fade text-center mb-12">
-          <span className={`text-[11px] tracking-[0.35em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>SELECTED WORK</span>
-          <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(2.4rem, 5vw, 3.5rem)" }}>
+          <span className={`text-[13px] tracking-[0.4em] uppercase block mb-4 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>SELECTED WORK</span>
+          <h2 className={`${greatVibes.className}`} style={{ color: SE.text, fontSize: "clamp(2.7rem, 5.5vw, 4rem)" }}>
             A Glimpse of Our World
           </h2>
         </div>
@@ -662,8 +662,8 @@ export default function AboutPage() {
         }}
       >
         <div data-reveal className="reveal-fade max-w-2xl mx-auto">
-          <span className={`text-[11px] tracking-[0.35em] uppercase block mb-6 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>READY TO BEGIN?</span>
-          <h2 className={`${greatVibes.className} mb-6`} style={{ color: SE.text, fontSize: "clamp(2.8rem, 6vw, 4.8rem)", lineHeight: 1.2 }}>
+          <span className={`text-[13px] tracking-[0.4em] uppercase block mb-6 font-bold ${gfsDidot.className}`} style={{ color: SE.accentBright }}>READY TO BEGIN?</span>
+          <h2 className={`${greatVibes.className} mb-6`} style={{ color: SE.text, fontSize: "clamp(3rem, 6.5vw, 5rem)", lineHeight: 1.2 }}>
             Let&apos;s Design Your Story
           </h2>
           <p className={`text-sm leading-relaxed mb-10 ${gfsDidot.className}`} style={{ color: SE.textSecondary }}>

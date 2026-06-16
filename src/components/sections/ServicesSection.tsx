@@ -88,7 +88,7 @@ export default function ServicesSection() {
       <div className="max-w-5xl mx-auto text-center mb-16">
         <div data-svc className="svc-fade">
           <span
-            className={`text-[11px] tracking-[0.35em] uppercase block mb-4 font-bold ${gfsDidot.className}`}
+            className={`text-[13px] tracking-[0.4em] uppercase block mb-4 font-bold ${gfsDidot.className}`}
             style={{ color: SE.accentBright }}
           >
             WHAT WE DO
@@ -97,7 +97,7 @@ export default function ServicesSection() {
             className={`${greatVibes.className} mb-6`}
             style={{
               color: SE.text,
-              fontSize: "clamp(2.6rem, 6vw, 4.3rem)",
+              fontSize: "clamp(2.9rem, 7vw, 4.8rem)",
               lineHeight: 1.2,
             }}
           >

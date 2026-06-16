@@ -62,7 +62,7 @@ export default function AboutSection() {
         {/* Eyebrow */}
         <div data-animate className="about-fade text-center mb-6">
           <span
-            className={`text-[11px] tracking-[0.35em] uppercase font-bold ${gfsDidot.className}`}
+            className={`text-[13px] tracking-[0.4em] uppercase font-bold ${gfsDidot.className}`}
             style={{ color: SE.accentBright }}
           >
             ABOUT THE STUDIO
@@ -75,7 +75,7 @@ export default function AboutSection() {
             className={`${greatVibes.className}`}
             style={{
               color: SE.text,
-              fontSize: "clamp(3rem, 7vw, 4.8rem)",
+              fontSize: "clamp(3.3rem, 8vw, 5.5rem)",
               lineHeight: 1.2,
             }}
           >
