@@ -196,22 +196,7 @@ export default function BrandLogo({
     ];
 
     return (
-      <div 
-        className={className} 
-        style={{ 
-          width, 
-          height,
-          background: "rgba(245, 240, 236, 0.45)",
-          backdropFilter: "blur(12px)",
-          borderRadius: "24px",
-          padding: "1.5rem 2rem",
-          boxShadow: "0 10px 30px rgba(45, 41, 38, 0.05), inset 0 1px 0 rgba(255,255,255,0.6)",
-          border: "1px solid rgba(222, 181, 160, 0.25)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center"
-        }}
-      >
+      <div className={className} style={{ width, height }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 824 223"
