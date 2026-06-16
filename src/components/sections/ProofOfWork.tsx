@@ -9,6 +9,7 @@ const SE = {
   bg: "#FAF8F6",
   bgPanel: "#F5F0EC",
   accent: "#DEB5A0",
+  accentBright: "#B57E5D",
   text: "#2D2926",
   textSecondary: "#6B6462",
   textMuted: "#9B9492",
@@ -75,8 +76,8 @@ export default function ProofOfWork() {
       <div className="max-w-6xl mx-auto text-center mb-12">
         <div data-pow className="pow-fade">
           <span
-            className={`text-[10px] tracking-[0.3em] uppercase block mb-4 ${gfsDidot.className}`}
-            style={{ color: SE.textMuted }}
+            className={`text-[11px] tracking-[0.35em] uppercase block mb-4 font-bold ${gfsDidot.className}`}
+            style={{ color: SE.accentBright }}
           >
             OUR PROCESS
           </span>
@@ -84,7 +85,7 @@ export default function ProofOfWork() {
             className={`${greatVibes.className} mb-6`}
             style={{
               color: SE.text,
-              fontSize: "clamp(2.2rem, 5vw, 4rem)",
+              fontSize: "clamp(2.6rem, 6vw, 4.3rem)",
               lineHeight: 1.2,
             }}
           >
