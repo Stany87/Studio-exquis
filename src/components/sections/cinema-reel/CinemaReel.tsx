@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react"
 import { GFS_Didot, Great_Vibes } from "next/font/google"
@@ -72,6 +73,7 @@ export default function CinemaReel({ className, isUnlocked, onUnlockChange }: Ci
   const tiltRef = useRef({ rotateX: 0, rotateY: 0, imgX: 0, imgY: 0 })
   const animFrameRef = useRef<number>(0)
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0, imgX: 0, imgY: 0 })
+  const [logoAnimation, setLogoAnimation] = useState<"draw" | "write" | "fade-stagger" | "glow-flow" | "handwritten">("handwritten")
 
   // Mouse-tracking 3D tilt (works in both locked and unlocked states)
   const handleMouseMove = useCallback(
@@ -205,16 +207,53 @@ export default function CinemaReel({ className, isUnlocked, onUnlockChange }: Ci
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Unified Brand Logo - animates smoothly between locked (top) and unlocked (center-large) states */}
+      <motion.div
+        animate={{
+          top: isUnlocked ? "50%" : "4rem",
+          y: isUnlocked ? "-150%" : "0%",
+          scale: isUnlocked ? 1.75 : 1.0,
+        }}
+        transition={{
+          duration: 0.9,
+          ease: [0.16, 1, 0.3, 1],
+          delay: isUnlocked ? 0.9 : 0
+        }}
+        className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center text-center pointer-events-auto z-40"
+      >
+        <a
+          href="#cinema-reel"
+          onClick={(e) => {
+            e.preventDefault();
+            if (isUnlocked) {
+              onUnlockChange(false);
+            }
+          }}
+          className={`block leading-none ${isUnlocked ? "cursor-pointer" : "cursor-default"}`}
+          style={{ textDecoration: "none" }}
+        >
+          <BrandLogo
+            width={220}
+            height={90}
+            dark={!isUnlocked}
+            animationType={isUnlocked ? logoAnimation : "write"}
+          />
+        </a>
+        <motion.span
+          animate={{
+            color: isUnlocked ? "rgba(255, 255, 255, 0.85)" : "#8A7F7C",
+          }}
+          transition={{ duration: 0.9 }}
+          className="text-[7.5px] tracking-[0.45em] uppercase -mt-1 block leading-none font-bold"
+          style={{ fontFamily: "var(--font-gfs-didot)" }}
+        >
+          ARCHITECTURE & INTERIOR DESIGN
+        </motion.span>
+      </motion.div>
+
       {/* Background/Intro text when locked */}
       {!isUnlocked && (
-        <div className="absolute inset-0 flex flex-col items-center justify-between py-12 pointer-events-none z-[15]">
-          <div className="flex flex-col items-center mt-4">
-            <BrandLogo width={220} height={90} dark={true} animated={true} />
-            <span className="text-[7.5px] tracking-[0.45em] uppercase text-[#8A7F7C] -mt-1 block leading-none">
-              ARCHITECTURE & INTERIOR DESIGN
-            </span>
-          </div>
-
+        <div className="absolute inset-0 flex flex-col items-center justify-end py-12 pointer-events-none z-[15]">
           <div className="flex flex-col items-center gap-3">
             <span className="text-[10px] tracking-[0.3em] uppercase text-[#6B6462] animate-pulse font-bold">
               Click Capsule to Enter
@@ -338,23 +377,7 @@ export default function CinemaReel({ className, isUnlocked, onUnlockChange }: Ci
                 </a>
               </div>
 
-              {/* Logo (Center) - vertically centered */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-auto text-center">
-                <a
-                  href="#cinema-reel"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    onUnlockChange(false)
-                  }}
-                  className="transition-all duration-300 hover:scale-[1.02] block leading-none"
-                  style={{ textDecoration: "none" }}
-                >
-                  <BrandLogo width={160} height={90} dark={false} animated={isUnlocked} />
-                </a>
-                <span className="text-[7px] tracking-[0.45em] uppercase block text-white/75 -mt-3 leading-none">
-                  ARCHITECTURE & INTERIOR DESIGN
-                </span>
-              </div>
+              {/* Logo is now top-level unified */}
 
               {/* CTA + Close (Right) */}
               <div className="pointer-events-auto flex items-center gap-4 h-full">
@@ -437,6 +460,44 @@ export default function CinemaReel({ className, isUnlocked, onUnlockChange }: Ci
                   <img src="/right-award-symbol.svg" alt="" className="h-8 w-4 opacity-50 invert" />
                 </div>
               </div>
+            </motion.div>
+
+            {/* Logo Style Selector (Bottom Right) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+              className="absolute right-8 md:right-16 bottom-8 md:bottom-16 z-20 flex flex-col items-end gap-2 pointer-events-auto"
+            >
+              <span className="text-[7.5px] tracking-[0.25em] uppercase text-white/50 font-bold mb-1">
+                Logo Style
+              </span>
+              <div className="flex items-center gap-1.5 bg-black/35 backdrop-blur-md p-1.5 rounded-full border border-white/10">
+                {(["handwritten", "glow-flow", "write", "draw", "fade-stagger"] as const).map((type) => (
+                  <button
+                    key={type}
+                    onClick={() => setLogoAnimation(type)}
+                    className={`px-3 py-1 rounded-full text-[8.5px] tracking-wider uppercase font-semibold transition-all duration-300 ${
+                      logoAnimation === type
+                        ? "bg-[#DEB5A0] text-white"
+                        : "text-white/60 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    {type === "handwritten" && "Draw"}
+                    {type === "glow-flow" && "Shimmer"}
+                    {type === "write" && "Wipe"}
+                    {type === "draw" && "Outline"}
+                    {type === "fade-stagger" && "Fade"}
+                  </button>
+                ))}
+              </div>
+              <Link 
+                href="/logo-demo" 
+                className="text-[8px] tracking-[0.2em] uppercase text-[#DEB5A0] hover:text-white transition-colors mt-2"
+                style={{ textDecoration: "none" }}
+              >
+                Open Sandbox Studio →
+              </Link>
             </motion.div>
           </>
         )}
