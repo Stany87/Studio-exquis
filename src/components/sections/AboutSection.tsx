@@ -120,14 +120,14 @@ export default function AboutSection() {
         <div data-animate className="about-fade text-center mt-12">
           <a
             href="/about"
-            className={`inline-flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase ${gfsDidot.className}`}
-            style={{ color: SE.accent, textDecoration: "none", transition: "color 0.25s ease" }}
+            className={`inline-flex items-center gap-4 text-[13px] tracking-[0.25em] uppercase font-bold ${gfsDidot.className}`}
+            style={{ color: SE.accentBright, textDecoration: "none", transition: "color 0.25s ease" }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = SE.text; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = SE.accent; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = SE.accentBright; }}
           >
-            <span style={{ width: 30, height: 1, background: "currentColor", display: "inline-block" }} />
+            <span style={{ width: 40, height: 1, background: "currentColor", display: "inline-block" }} />
             Read Our Full Story
-            <span style={{ width: 30, height: 1, background: "currentColor", display: "inline-block" }} />
+            <span style={{ width: 40, height: 1, background: "currentColor", display: "inline-block" }} />
           </a>
         </div>
 
