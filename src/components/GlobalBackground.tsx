@@ -6,24 +6,11 @@ export default function GlobalBackground() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.playbackRate = 0.5;
-
-      const handlePlay = () => {
-        video.playbackRate = 0.5;
-      };
-
-      video.addEventListener("play", handlePlay);
-
+    if (videoRef.current) {
       // Force play if autoplay gets blocked or delayed
-      video.play().catch((err) => {
+      videoRef.current.play().catch((err) => {
         console.warn("Autoplay failed or blocked:", err);
       });
-
-      return () => {
-        video.removeEventListener("play", handlePlay);
-      };
     }
   }, []);
 

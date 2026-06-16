@@ -235,10 +235,12 @@ export default function CinemaReel({ className, isUnlocked, onUnlockChange }: Ci
           }
         }}
         animate={{
-          top: isUnlocked ? "0%" : "50%",
-          left: isUnlocked ? "0%" : "50%",
-          x: isUnlocked ? "0%" : "-50%",
-          y: isUnlocked ? "0%" : "-50%",
+          top: "50%",
+          left: "50%",
+          x: "-50%",
+          y: "-50%",
+          rotateX: isUnlocked ? 0 : tilt.rotateX,
+          rotateY: isUnlocked ? 0 : tilt.rotateY,
           width: isUnlocked ? "100%" : "300px",
           height: isUnlocked ? "100%" : "400px",
           borderRadius: isUnlocked ? "0px" : "135px",
@@ -248,15 +250,16 @@ export default function CinemaReel({ className, isUnlocked, onUnlockChange }: Ci
             ? "none"
             : "0 0 35px rgba(222, 181, 160, 0.45), 0 25px 65px -10px rgba(45, 41, 38, 0.25)",
         }}
-        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        transition={{
+          default: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+          rotateX: { type: "tween", duration: 0.1 },
+          rotateY: { type: "tween", duration: 0.1 },
+        }}
         className={`absolute overflow-hidden z-10 border ${isUnlocked ? "cursor-default" : "cursor-pointer"}`}
         style={{
           borderStyle: "solid",
+          transformStyle: "preserve-3d",
           willChange: "transform",
-          ...(!isUnlocked ? {
-            transform: `rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg) translate(-50%, -50%)`,
-            transformStyle: "preserve-3d" as const,
-          } : {})
         }}
       >
         {/* Container for the image */}
